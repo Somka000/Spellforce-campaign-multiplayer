@@ -6,9 +6,18 @@ GlobalSpawnDuration = 150
 --Monumentenclaim
 OnPlatformOneTimeEvent
 {
+	UpdateInterval = 10,
 	Conditions = 
 	{
-		ODER(IsMonumentInUse {X = 303, Y = 303, Range = 0},IsMonumentInUse {X = 160, Y = 326, Range = 0}),
+		ODER9
+		{
+		IsMonumentInUse {X = 303, Y = 303, Range = 0, UpdateInterval = 10},
+		IsMonumentInUse {X = 160, Y = 326, Range = 0, UpdateInterval = 10},
+		IsMonumentInUse {X = 254, Y = 195, Range = 0, UpdateInterval = 10},
+		IsMonumentInUse {X = 178, Y = 317, Range = 0, UpdateInterval = 10},
+		IsMonumentInUse {X = 222, Y = 348, Range = 0, UpdateInterval = 10},
+		IsMonumentInUse {X = 260, Y = 256, Range = 0, UpdateInterval = 10},
+		},
 	},
 	Actions =
 	{
@@ -22,21 +31,21 @@ OnPlatformOneTimeEvent
 RtsSpawnNT
 {
 	Clan = 27,
-	MaxClanSize = 30,
+	MaxClanSize = 90,
 	X = 401,
 	Y = 210,
 	Range = 3,
 	
 	
 	Timer	= "WildlandpassMonumentClaimedTimer",-- name des globalen timers der bei einem bestimmten event gesetzt wird und das spawning ausl�st
-	Init	= {876, 876, 881, 881}, 	-- Orks Spearmen/Veteran
+	Init	= {876, 876, 881, 881, 876, 876, 881, 881, 876, 876, 881, 881}, 	-- Orks Spearmen/Veteran
 	SpawnData =
 	{
-		[10]	= {Minutes = 3, 	Units = {876, 881}},	
-		[30]	= {Minutes = 3, 	Units = {876}},	
-		[45]	= {Minutes = 2.5, 	Units = {881}}, 	
-		[50]	= {Minutes = 1.5, 	Units = {882, 876, 881}},
-		[90]	= {Seconds = 50, 	Units = {876, 881}},
+		[10]	= {Seconds = 36, 	Units = {876, 881}},	
+		[30]	= {Seconds = 36, 	Units = {876}},	
+		[45]	= {Seconds = 30, 	Units = {881}}, 	
+		[50]	= {Seconds = 18, 	Units = {882, 876, 881}},
+		[90]	= {Seconds = 10, 	Units = {876, 881}},
 	},
 	NpcBuildingsExist = {X = 402, Y = 214, Range = 8},
 }
@@ -46,21 +55,21 @@ RtsSpawnNT
 RtsSpawnNT
 {
 	Clan = 26,
-	MaxClanSize = 20,
+	MaxClanSize = 60,
 	X = 403,
 	Y = 199,
 	Range = 3,
 	
 	
 	Timer	= "WildlandpassMonumentClaimedTimer",-- name des globalen timers der bei einem bestimmten event gesetzt wird und das spawning ausl�st
-	Init	= {876, 876, 881, 881}, 	-- Orks Spearmen/Veteran
+	Init	= {876, 876, 881, 881, 876, 876, 881, 881, 876, 876, 881, 881}, 	-- Orks Spearmen/Veteran
 	SpawnData =
 	{
-		[10]	= {Minutes = 3, 	Units = {876, 881}},	
-		[35]	= {Minutes = 3, 	Units = {876}},	
-		[40]	= {Minutes = 2.5, 	Units = {881}}, 	
-		[45]	= {Minutes = 1.5, 	Units = {882, 876, 881}},
-		[70]	= {Seconds = 50, 	Units = {876, 881}},
+		[10]	= {Seconds = 36, 	Units = {876, 881}},	
+		[35]	= {Seconds = 36, 	Units = {876}},	
+		[40]	= {Seconds = 30, 	Units = {881}}, 	
+		[45]	= {Seconds = 18, 	Units = {882, 876, 881}},
+		[70]	= {Seconds = 10, 	Units = {876, 881}},
 	},
 	NpcBuildingsExist = {X = 400, Y = 196, Range = 6},
 }
@@ -91,17 +100,17 @@ RtsSpawnNT
 RtsSpawnNT
 {
 	Clan = 24,
-	MaxClanSize = 10,
+	MaxClanSize = 30,
 	X = 414,
 	Y = 211,
 	Range = 3,
 	
 	
 	Timer	= "WildlandpassMonumentClaimedTimer",-- name des globalen timers der bei einem bestimmten event gesetzt wird und das spawning ausl�st
-	Init	= {876, 876, 881, 876, 876, 881, 882, 882}, 	-- Orks Spearmen/Veteran
+	Init	= {876, 876, 881, 876, 876, 881, 882, 882, 876, 876, 881, 876, 876, 881, 882, 882, 876, 876, 881, 876, 876, 881, 882, 882}, 	-- Orks Spearmen/Veteran
 	SpawnData =
 	{
-		[0]		= {Minutes = 15, 	Units = {876, 881}},	
+		[0]		= {Minutes = 3, 	Units = {876, 881}},	
 	},
 	NpcBuildingsExist = {X = 421, Y = 207, Range = 6},
 }
@@ -112,17 +121,17 @@ RtsSpawnNT
 RtsSpawnNT
 {
 	Clan = 23,
-	MaxClanSize = 12,
+	MaxClanSize = 36,
 	X = 161,
 	Y = 191	,
 	Range = 3,
 	
 	
 	Timer	= "WildlandpassMonumentClaimedTimer",-- name des globalen timers der bei einem bestimmten event gesetzt wird und das spawning ausl�st
-	Init	= {852, 852, 852, 852, 743, 743, 851, 851}, 	-- Orks Spearmen/Veteran
+	Init	= {852, 852, 852, 852, 743, 743, 851, 851, 852, 852, 852, 852, 743, 743, 851, 851, 852, 852, 852, 852, 743, 743, 851, 851}, 	-- Orks Spearmen/Veteran
 	SpawnData =                                                                     
 	{                                                                               
-		[0]		= {Minutes = 3, 	Units = {852, 852, 852, 852, 743, 743, 851, 851}},	
+		[0]		= {Seconds = 36, 	Units = {852, 852, 852, 852, 743, 743, 851, 851}},	
 	},                                                                              
 	NpcBuildingsExist = {X = 161, Y = 183, Range = 10},
 }
@@ -132,21 +141,21 @@ RtsSpawnNT
 RtsSpawnNT
 {
 	Clan = 22,
-	MaxClanSize = 20,
+	MaxClanSize = 60,
 	X = 189,
 	Y = 292,
 	Range = 1,
 	
 	
 	Timer	= "WildlandpassMonumentClaimedTimer",-- name des globalen timers der bei einem bestimmten event gesetzt wird und das spawning ausl�st
-	Init	= {852, 743, 851}, 	-- Briganten Schwert/Scharfsch�tze/Keule
+	Init	= {852, 743, 851, 852, 743, 851, 852, 743, 851}, 	-- Briganten Schwert/Scharfsch�tze/Keule
 	SpawnData =
 	{
-		[0]		= {Minutes = 6, 	Units = {852, 852, 852, 852, 743, 743, 851, 851}},
-		[30]	= {Minutes = 3, 	Units = {852}},	                                  
-		[45]	= {Minutes = 2.5, 	Units = {851}}, 	                              
-		[60]	= {Minutes = 1.5, 	Units = {852, 743, 851}},                         
-		[90]	= {Seconds = 50, 	Units = {852, 851}},	                          
+		[0]		= {Minutes = 1.2, 	Units = {852, 852, 852, 852, 743, 743, 851, 851}},
+		[30]	= {Seconds = 36, 	Units = {852}},	                                  
+		[45]	= {Seconds = 30, 	Units = {851}}, 	                              
+		[60]	= {Seconds = 18, 	Units = {852, 743, 851}},                         
+		[90]	= {Seconds = 10, 	Units = {852, 851}},	                          
 	},
 	NpcBuildingsExist = {X = 189, Y = 291, Range = 10},
 }
@@ -159,21 +168,21 @@ RtsSpawnNT
 RtsSpawnNT
 {
 	Clan = 21,
-	MaxClanSize = 35,
+	MaxClanSize = 105,
 	X = 188,
 	Y = 195,
 	Range = 1,
 	
 	
 	Timer	= "WildlandpassMonumentClaimedTimer",-- name des globalen timers der bei einem bestimmten event gesetzt wird und das spawning ausl�st
-	Init	= {852, 852, 852, 852, 743, 743, 851, 851}, 	-- Briganten Schwert/Scharfsch�tze/Keule
+	Init	= {852, 852, 852, 852, 743, 743, 851, 851, 852, 852, 852, 852, 743, 743, 851, 851, 852, 852, 852, 852, 743, 743, 851, 851}, 	-- Briganten Schwert/Scharfsch�tze/Keule
 	SpawnData =
 	{
-		[15]	= {Minutes = 3, 	Units = {852, 852, 852, 852, 743, 743, 851, 851}},
-		[30]	= {Minutes = 3, 	Units = {852}},	
-		[45]	= {Minutes = 2.5, 	Units = {851}}, 	
-		[70]	= {Minutes = 1.5, 	Units = {852, 743, 851}},
-		[100]	= {Seconds = 50, 	Units = {852, 851}},	
+		[15]	= {Seconds = 36, 	Units = {852, 852, 852, 852, 743, 743, 851, 851}},
+		[30]	= {Seconds = 36, 	Units = {852}},	
+		[45]	= {Seconds = 30, 	Units = {851}}, 	
+		[70]	= {Seconds = 18, 	Units = {852, 743, 851}},
+		[100]	= {Seconds = 10, 	Units = {852, 851}},	
 	},
 	NpcBuildingsExist = {X = 188, Y = 188, Range = 3},
 }
@@ -187,21 +196,21 @@ RtsSpawnNT
 RtsSpawnNT
 {
 	Clan = 20,
-	MaxClanSize = 15,
+	MaxClanSize = 45,
 	X = 400,
 	Y = 294,
 	Range = 1,
 	
 	
 	Timer	= "WildlandpassMonumentClaimedTimer",-- name des globalen timers der bei einem bestimmten event gesetzt wird und das spawning ausl�st
-	Init	= {876, 876, 876, 881, 881}, 	-- Orks Spearmen/Veteran
+	Init	= {876, 876, 876, 881, 881, 876, 876, 876, 881, 881, 876, 876, 876, 881, 881}, 	-- Orks Spearmen/Veteran
 	SpawnData =
 	{
-		[10]	= {Minutes = 4, 	Units = {876, 881}},	  
-		[32]	= {Minutes = 3, 	Units = {876}},	          
-		[43]	= {Minutes = 2.5, 	Units = {881}}, 	      
-		[57]	= {Minutes = 2, 	Units = {882, 876, 881}}, 
-		[90]	= {Seconds = 50, 	Units = {876, 881}},      
+		[10]	= {Seconds = 48, 	Units = {876, 881}},	  
+		[32]	= {Seconds = 36, 	Units = {876}},	          
+		[43]	= {Seconds = 30, 	Units = {881}}, 	      
+		[57]	= {Seconds = 24, 	Units = {882, 876, 881}}, 
+		[90]	= {Seconds = 10, 	Units = {876, 881}},      
 	},
 	NpcBuildingsExist = {X = 400, Y = 294, Range = 7},
 }
@@ -212,21 +221,21 @@ RtsSpawnNT
 RtsSpawnNT
 {
 	Clan = 19,
-	MaxClanSize = 25,
+	MaxClanSize = 75,
 	X = 396,
 	Y = 310,
 	Range = 1,
 	
 	
 	Timer	= "WildlandpassMonumentClaimedTimer",-- name des globalen timers der bei einem bestimmten event gesetzt wird und das spawning ausl�st
-	Init	= {876, 876, 876, 881, 881}, 	-- Orks Spearmen/Veteran
+	Init	= {876, 876, 876, 881, 881, 876, 876, 876, 881, 881, 876, 876, 876, 881, 881}, 	-- Orks Spearmen/Veteran
 	SpawnData =
 	{
-		[5]		= {Minutes = 4, 	Units = {876, 881}},	  
-		[25]	= {Minutes = 3, 	Units = {876}},	          
-		[41]	= {Minutes = 2.5, 	Units = {881}}, 	      
-		[49]	= {Minutes = 2, 	Units = {882, 876, 881}}, 
-		[92]	= {Seconds = 50, 	Units = {876, 881}},      
+		[5]		= {Seconds = 48, 	Units = {876, 881}},	  
+		[25]	= {Seconds = 36, 	Units = {876}},	          
+		[41]	= {Seconds = 30, 	Units = {881}}, 	      
+		[49]	= {Seconds = 24, 	Units = {882, 876, 881}}, 
+		[92]	= {Seconds = 10, 	Units = {876, 881}},      
 	},
 	NpcBuildingsExist = {X = 396, Y = 310, Range = 6},
 }
@@ -236,21 +245,21 @@ RtsSpawnNT
 RtsSpawnNT
 {
 	Clan = 18,
-	MaxClanSize = 25,
+	MaxClanSize = 75,
 	X = 374,
 	Y = 308,
 	Range = 1,
 	
 	
 	Timer	= "WildlandpassMonumentClaimedTimer",-- name des globalen timers der bei einem bestimmten event gesetzt wird und das spawning ausl�st
-	Init	= {876, 876, 876, 881, 881}, 	-- Orks Spearmen/Veteran
+	Init	= {876, 876, 876, 881, 881, 876, 876, 876, 881, 881, 876, 876, 876, 881, 881}, 	-- Orks Spearmen/Veteran
 	SpawnData =
 	{
-		[23]	= {Minutes = 4, 	Units = {876, 881}},	  
-		[46]	= {Minutes = 3, 	Units = {876}},	          
-		[51]	= {Minutes = 2.5, 	Units = {881}}, 	      
-		[69]	= {Minutes = 2, 	Units = {882, 876, 881}}, 
-		[89]	= {Seconds = 50, 	Units = {876, 881}},      
+		[23]	= {Seconds = 48, 	Units = {876, 881}},	  
+		[46]	= {Seconds = 36, 	Units = {876}},	          
+		[51]	= {Seconds = 30, 	Units = {881}}, 	      
+		[69]	= {Seconds = 24, 	Units = {882, 876, 881}}, 
+		[89]	= {Seconds = 10, 	Units = {876, 881}},      
 	},
 	NpcBuildingsExist = {X = 368, Y = 311, Range = 4},
 }
@@ -260,17 +269,17 @@ RtsSpawnNT
 RtsSpawnNT
 {
 	Clan = 17,
-	MaxClanSize = 10,
+	MaxClanSize = 30,
 	X = 277,
 	Y = 220,
 	Range = 1,
 	
 	
 	Timer	= "WildlandpassMonumentClaimedTimer",-- name des globalen timers der bei einem bestimmten event gesetzt wird und das spawning ausl�st
-	Init	= {876, 876, 876, 881, 881}, 	-- Orks Spearmen/Veteran
+	Init	= {876, 876, 876, 881, 881, 876, 876, 876, 881, 881, 876, 876, 876, 881, 881}, 	-- Orks Spearmen/Veteran
 	SpawnData =
 	{
-		[0]	= {Minutes = 4, 	Units = {876, 881}},	  
+		[0]	= {Seconds = 48, 	Units = {876, 881}},	  
 	},
 	NpcBuildingsExist = {X = 277, Y = 217, Range = 10},
 }
